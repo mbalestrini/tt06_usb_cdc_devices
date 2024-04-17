@@ -26,7 +26,7 @@ module usb_cdc_devices
    // If we use a different clock for the app we should set APP_CLK_FREQ.
    // The important value is the 12MHz threshold, not the exact value. 
    // in_fifo and out_fifo synchronize clocks according to if the clock is <=12 or not
-   localparam USE_APP_CLK = 0;
+   localparam USE_APP_CLK = 1;
    localparam APP_CLK_FREQ = 12;
 
    /**** arcade_io_device ****/
@@ -46,13 +46,26 @@ module usb_cdc_devices
    wire             in_valid;
    wire             out_ready;
 
+   wire             clk_24mhz;
+   wire             clk_12mhz;
+   wire             clk_6mhz;
+   wire             clk_3mhz;
+
+
    assign clk_usb = clk;
-   assign clk_app = clk;
+   assign clk_app = clk_12mhz;
 
    assign led_o = (configured) ? frame[9] : ~&frame[4:3];
 //    assign dbg_pin_0 = tx_en;
    
 
+   prescaler u_prescaler (.clk_i(clk_usb),
+                        .rstn_i(rstn_i),
+                        .clk_div2_o(clk_24mhz),
+                        .clk_div4_o(clk_12mhz),
+                        .clk_div8_o(clk_6mhz),
+                        .clk_div16_o(clk_3mhz));
+                        
    arcade_io_device #(
             .NUM_INPUTS(ARCADE_IO_NUM_INPUTS)
    ) u_device0 (

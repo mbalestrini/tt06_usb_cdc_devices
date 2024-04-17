@@ -27,7 +27,7 @@ module arcade_io_device #(
    input wire   usb_configured_i
 );
 
-localparam DEBOUNCE_MS = 2;
+localparam DEBOUNCE_MS = 10;
 
 reg beat_1ms; // Use USB frames (1 per millisecond aprox) to time events
 reg last_frame_beat;
@@ -65,7 +65,7 @@ generate
     end
 endgenerate
 
-
+reg wait_one_clock;
 
 always @(posedge clk_i) begin
     if(~rstn_i) begin
@@ -73,18 +73,21 @@ always @(posedge clk_i) begin
         in_valid_o <= 0;
         out_ready_o <= 0;
         last_input_sent <= {NUM_INPUTS{1'b0}};
+        wait_one_clock <= 0;
     end else begin
         // Discard input from host
         out_ready_o <= 1;
 
         in_valid_o <= 0;
         in_data_o <= 8'b0;
-        if(in_ready_i) begin
+        wait_one_clock <= 0;
+        if(in_ready_i && ~wait_one_clock) begin
             input_index <= input_index + 1;
             if((last_input_sent[input_index] != debounced_inputs[input_index])) begin
                 in_valid_o <= 1;
                 in_data_o <= debounced_inputs[input_index] ? 8'h41 + input_index : 8'h61 + input_index;   
                 last_input_sent[input_index] <= debounced_inputs[input_index];
+                wait_one_clock <= 0;
             end            
         end
     end
@@ -117,11 +120,10 @@ end
                 in_ready_i <= 1;
                 cover(test_counter==20);    
             end
-
-        end    
-
-        
+        end            
     end
+
+    
 
 `endif
 

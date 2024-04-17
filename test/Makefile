@@ -5,7 +5,20 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = \
+	tt_um_mbalestrini_usb_cdc_devices.v \
+	usb_cdc_devices.v \
+	prescaler.v \
+    device0/arcade_io_device.v \
+    device0/input_debouncer.v \
+    usb_cdc/bulk_endp.v \
+    usb_cdc/ctrl_endp.v \
+    usb_cdc/in_fifo.v \
+    usb_cdc/out_fifo.v \
+    usb_cdc/phy_rx.v \
+    usb_cdc/phy_tx.v \
+    usb_cdc/sie.v \
+    usb_cdc/usb_cdc.v
 
 ifneq ($(GATES),yes)
 
