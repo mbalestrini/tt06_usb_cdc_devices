@@ -1,21 +1,32 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
-  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  title:        "USB CDC device"      # Project title
+  author:       "Maximo Balestrini"      # Your name
+  discord:      "mbalestrini"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  ""      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     48000000       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_mbalestrini_usb_cdc_devices"
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "project.v"
+    - "src/tt_um_mbalestrini_usb_cdc_devices.v"
+	  - "src/usb_cdc_devices.v"
+	  - "src/device0/arcade_io_device.v"
+	  - "src/device0/input_debouncer.v"
+	  - "src/usb_cdc/bulk_endp.v"
+    - "src/usb_cdc/ctrl_endp.v"
+    - "src/usb_cdc/in_fifo.v"
+    - "src/usb_cdc/out_fifo.v"
+    - "src/usb_cdc/phy_rx.v"
+    - "src/usb_cdc/phy_tx.v"
+    - "src/usb_cdc/sie.v"
+    - "src/usb_cdc/usb_cdc.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
