@@ -3,7 +3,7 @@ project:
   title:        "USB CDC device"      # Project title
   author:       "Maximo Balestrini"      # Your name
   discord:      "mbalestrini"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  description:  "USB CDC device"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     48000000       # Clock frequency in Hz (or 0 if not applicable)
 
@@ -16,10 +16,10 @@ project:
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
     - "src/tt_um_mbalestrini_usb_cdc_devices.v"
-	  - "src/usb_cdc_devices.v"
-	  - "src/device0/arcade_io_device.v"
-	  - "src/device0/input_debouncer.v"
-	  - "src/usb_cdc/bulk_endp.v"
+    - "src/usb_cdc_devices.v"
+    - "src/device0/arcade_io_device.v"
+    - "src/device0/input_debouncer.v"
+    - "src/usb_cdc/bulk_endp.v"
     - "src/usb_cdc/ctrl_endp.v"
     - "src/usb_cdc/in_fifo.v"
     - "src/usb_cdc/out_fifo.v"
