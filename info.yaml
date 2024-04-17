@@ -15,18 +15,18 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:        
-    - "src/tt_um_mbalestrini_usb_cdc_devices.v"
-    - "src/usb_cdc_devices.v"
-    - "src/device0/arcade_io_device.v"
-    - "src/device0/input_debouncer.v"
-    - "src/usb_cdc/bulk_endp.v"
-    - "src/usb_cdc/ctrl_endp.v"
-    - "src/usb_cdc/in_fifo.v"
-    - "src/usb_cdc/out_fifo.v"
-    - "src/usb_cdc/phy_rx.v"
-    - "src/usb_cdc/phy_tx.v"
-    - "src/usb_cdc/sie.v"
-    - "src/usb_cdc/usb_cdc.v"
+    - "tt_um_mbalestrini_usb_cdc_devices.v"
+    - "usb_cdc_devices.v"
+    - "device0/arcade_io_device.v"
+    - "device0/input_debouncer.v"
+    - "usb_cdc/bulk_endp.v"
+    - "usb_cdc/ctrl_endp.v"
+    - "usb_cdc/in_fifo.v"
+    - "usb_cdc/out_fifo.v"
+    - "usb_cdc/phy_rx.v"
+    - "usb_cdc/phy_tx.v"
+    - "usb_cdc/sie.v"
+    - "usb_cdc/usb_cdc.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
