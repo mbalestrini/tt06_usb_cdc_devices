@@ -13,9 +13,13 @@ module usb_cdc_devices
    output wire dn_tx_o, // USB-
    input wire dn_rx_i,   // USB-
    
-   output wire led_o, // User LED ON=1, OFF=0
+   output wire debug_usb_configured_o, // While USB_CDC is in configured state, configured_o shall be high.
+   output wire debug_usb_tx_en_o,
+   output wire [10:0] debug_usb_frame_o, // frame_o shall be last recognized USB frame number sent by USB host.
+   
+   output wire debug_led_o, // User LED ON=1, OFF=0
+
    input wire [7:0] inputs_i
-   // output dbg_pin_0
    );
 
    /**** usb_cdc ****/
@@ -55,7 +59,10 @@ module usb_cdc_devices
    assign clk_usb = clk;
    assign clk_app = clk_12mhz;
 
-   assign led_o = (configured) ? frame[9] : ~&frame[4:3];
+   assign debug_led_o = (configured) ? frame[9] : ~&frame[4:3];
+   assign debug_usb_configured_o = configured;
+   assign debug_usb_tx_en_o = tx_en_o;
+   assign debug_usb_frame_o = frame;
 //    assign dbg_pin_0 = tx_en;
    
 
@@ -65,12 +72,26 @@ module usb_cdc_devices
                         .clk_div4_o(clk_12mhz),
                         .clk_div8_o(clk_6mhz),
                         .clk_div16_o(clk_3mhz));
+
+
+   reg [1:0]        rstn_sync;
+   wire             rstn;
+   
+   assign rstn = rstn_sync[0];
+
+   always @(posedge clk_app or negedge rstn_i) begin
+      if (~rstn_i) begin
+         rstn_sync <= 2'd0;
+      end else begin
+         rstn_sync <= {1'b1, rstn_sync[1]};
+      end
+   end                        
                         
    arcade_io_device #(
             .NUM_INPUTS(ARCADE_IO_NUM_INPUTS)
    ) u_device0 (
             .clk_i(clk_app),
-            .rstn_i(rstn_i),
+            .rstn_i(rstn),
             .inputs_i(inputs_i),
             .frame_i(frame),
             .out_data_i(out_data),
@@ -94,7 +115,7 @@ module usb_cdc_devices
               .configured_o(configured),
               .app_clk_i(clk_app),
               .clk_i(clk_usb),
-              .rstn_i(rstn_i),
+              .rstn_i(rstn),
               .out_ready_i(out_ready),
               .in_data_i(in_data),
               .in_valid_i(in_valid),

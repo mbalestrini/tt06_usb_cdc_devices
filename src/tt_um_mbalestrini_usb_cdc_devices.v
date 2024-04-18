@@ -23,13 +23,16 @@ module tt_um_mbalestrini_usb_cdc_devices (
   wire usb_dn_tx; // USB-
   wire usb_dn_rx; // USB-
 
+  wire debug_usb_configured;
+  wire debug_usb_tx_en;
   wire debug_led;
+  wire [10:0] debug_usb_frame;
   wire [7:0] device_inputs;
 
   // All output pins must be assigned. If not used, assign to 0.
 
   // OUTPUT pins
-  assign uo_out = {6'b000000, debug_led, usb_dp_pu};
+  assign uo_out = {debug_usb_frame[3:0], debug_usb_tx_en, debug_usb_configured, debug_led, usb_dp_pu};
 
   // BIDIR pins
   assign uio_oe = {6'b000000, usb_tx_en, usb_tx_en};
@@ -52,7 +55,11 @@ module tt_um_mbalestrini_usb_cdc_devices (
     .dn_tx_o(usb_dn_tx), // USB-
     .dn_rx_i(usb_dn_rx),   // USB-
 
-    .led_o(debug_led), // User LED ON=1, OFF=0
+    .debug_usb_configured_o(debug_usb_configured), // While USB_CDC is in configured state, configured_o shall be high.
+    .debug_usb_tx_en_o(debug_usb_tx_en),
+    .debug_usb_frame_o(debug_usb_frame), // frame_o shall be last recognized USB frame number sent by USB host.
+   
+    .debug_led_o(debug_led), // User LED ON=1, OFF=0
     .inputs_i(device_inputs)
   );
 
