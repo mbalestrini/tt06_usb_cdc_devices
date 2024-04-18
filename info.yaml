@@ -17,6 +17,7 @@ project:
   source_files:        
     - "tt_um_mbalestrini_usb_cdc_devices.v"
     - "usb_cdc_devices.v"
+    - "prescaler.v"
     - "device0/arcade_io_device.v"
     - "device0/input_debouncer.v"
     - "usb_cdc/bulk_endp.v"
