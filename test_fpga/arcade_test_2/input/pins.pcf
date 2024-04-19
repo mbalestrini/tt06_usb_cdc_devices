@@ -1,0 +1,26 @@
+# ##############################################################################
+# TinyFPGA BX
+# ##############################################################################
+
+set_io usb_pu   H1
+set_io usb_n    J1 
+set_io usb_p    H2 
+set_io led      B3
+set_io clk      B2
+
+set_io device_inputs[0]  D9
+set_io device_inputs[1]  D8
+set_io device_inputs[2]  C9
+set_io device_inputs[3]  A9
+set_io device_inputs[4]  B8
+set_io device_inputs[5]  A8
+set_io device_inputs[6]  B7
+set_io device_inputs[7]  A7
+
+
+set_io debug_usb_configured A2
+set_io debug_usb_tx_en      A1
+set_io debug_usb_frame_partial[0]   B1
+set_io debug_usb_frame_partial[1]   C2
+set_io debug_usb_frame_partial[2]   C1
+set_io debug_usb_frame_partial[3]   D2
