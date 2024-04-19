@@ -55,7 +55,7 @@ $(OUT_DIR)/%.vvp: $(VERILOG_SRC_FILES) $(TB_HDL_FILES) | $(OUT_DIR)
 $(OUT_DIR)/%.fst: $(OUT_DIR)/%.vvp
 	rm -f results.xml
 	vvp -N $< -fst && mv tb.dump $@ 
-	echo "success" > results.xml
+	echo '<testsuites name="results"><testsuite name="all"><testcase name="test_project"/></testsuite></testsuites>' > results.xml
 
 sim: $(OUT_DIR)/$(PROJ).fst
 
