@@ -50,10 +50,12 @@ $(OUT_DIR):
 	mkdir -p $@
 
 $(OUT_DIR)/%.vvp: $(VERILOG_SRC_FILES) $(TB_HDL_FILES) | $(OUT_DIR)
-	iverilog $(COMPILE_ARGS) -g2001 -t vvp -s tb_$(PROJ) $(INC_DIRS) -o $@ $^
+	iverilog $(COMPILE_ARGS) -g2001 -t vvp -s tb_$(PROJ) $(INC_DIRS) -o $@ $^	
 
 $(OUT_DIR)/%.fst: $(OUT_DIR)/%.vvp
-	vvp -N $< -fst && mv tb.dump $@
+	rm -f results.xml
+	vvp -N $< -fst && mv tb.dump $@ 
+	echo "success" > results.xml
 
 sim: $(OUT_DIR)/$(PROJ).fst
 

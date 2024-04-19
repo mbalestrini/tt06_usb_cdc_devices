@@ -8,7 +8,7 @@
       $display("  expected: %x", value); \
       $display("%c[0m",27); \
       #(1*`BIT_TIME); \
-      $finish; \
+      $finish_and_return(1); \
   end
 
 `define report_error(msg) \
@@ -17,7 +17,7 @@
    $display("ERROR @ %t\n  %s", $time, msg); \
    $display("%c[0m",27); \
    #(1*`BIT_TIME); \
-   $finish;
+   $finish_and_return(1);
 
 `define assert_warning(msg, signal, value) \
    if ((signal) !== (value)) begin \
