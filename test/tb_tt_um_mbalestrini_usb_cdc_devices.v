@@ -6,7 +6,7 @@ module tb_tt_um_mbalestrini_usb_cdc_devices ( );
 `define USB_CDC_INST tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.u_usb_cdc_devices.u_usb_cdc
 
    localparam MAX_BITS = 128;
-   localparam MAX_BYTES = 128;
+   localparam MAX_BYTES = 128*CHANNELS;
    localparam MAX_STRING = 128;
 
    reg        dp_force;
@@ -27,7 +27,8 @@ module tb_tt_um_mbalestrini_usb_cdc_devices ( );
    localparam             VENDORID = 16'h0000;
    localparam             PRODUCTID = 16'h0000;
 
-`include "usb_test_1ch.v"
+// `include "usb_test_1ch.v"
+`include "usb_test_2ch.v"
 
    `progress_bar(test, 37)
 
@@ -174,10 +175,11 @@ module tb_tt_um_mbalestrini_usb_cdc_devices ( );
       end
       
       // Host should receive character 'A' (h41)
-      test_data_in(address, ENDP_BULK,
+      test_data_in(address, ENDP_BULK1,
                    {8'h41},
                    1, PID_ACK, IN_BULK_MAXPACKETSIZE, 100000/83*`BIT_TIME, 0, datain_toggle, ZLP);
 
+      test = "Test IN BULK DATA after ui_in[0]=0";
       device_inputs[0] = 1'b0;      
 
       // Send mora than 10 SOF because the debouncer is using the usb frame number to count
@@ -187,7 +189,7 @@ module tb_tt_um_mbalestrini_usb_cdc_devices ( );
       end
       
       // Host shold receive character 'a' (h61)
-      test_data_in(address, ENDP_BULK,
+      test_data_in(address, ENDP_BULK1,
                    {8'h61},
                    1, PID_ACK, IN_BULK_MAXPACKETSIZE, 100000/83*`BIT_TIME, 0, datain_toggle, ZLP);
 

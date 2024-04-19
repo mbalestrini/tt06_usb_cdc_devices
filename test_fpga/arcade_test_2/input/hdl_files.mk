@@ -13,6 +13,7 @@ arcade_test_2.v \
 usb_cdc_devices.v \
 arcade_io_device.v \
 input_debouncer.v \
+loopback_device.v \
 
 
 # Testbench HDL files
@@ -24,6 +25,7 @@ tb_arcade_test_1.v \
 # list of HDL files directories separated by ":"
 VPATH = ../src: \
         ../src/device0: \
+        ../src/device1: \
         ../src/usb_cdc: \
         arcade_test_2: \
         common/hdl: \
