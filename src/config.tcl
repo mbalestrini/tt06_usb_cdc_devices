@@ -22,8 +22,8 @@ set ::env(BASE_SDC_FILE) "$::env(DESIGN_DIR)/project.sdc"
 
 
 # Hold slack margin - Increase them in case you are getting hold violations.
-set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.2
-set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.2
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.4
+set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.4
 
 # RUN_LINTER, LINTER_INCLUDE_PDK_MODELS - Disabling the linter is not recommended!
 set ::env(RUN_LINTER) 1
