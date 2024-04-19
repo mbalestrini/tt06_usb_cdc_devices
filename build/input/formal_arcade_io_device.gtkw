@@ -1,0 +1,44 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Wed Apr 17 17:12:54 2024
+[*]
+[dumpfile] "/home/mbalestrini/WORK_DISK/Work/ASIC/tt06_usb_cdc_devices/build/output/task_task_cover/engine_0/trace0.vcd"
+[dumpfile_mtime] "Wed Apr 17 17:12:12 2024"
+[dumpfile_size] 4823
+[savefile] "/home/mbalestrini/WORK_DISK/Work/ASIC/tt06_usb_cdc_devices/build/input/formal_arcade_io_device.gtkw"
+[timestart] 0
+[size] 1920 1045
+[pos] -27 -1
+*-3.321928 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 276
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 313
+@28
+arcade_io_device.beat_1ms
+arcade_io_device.clk_i
+@22
+arcade_io_device.debounced_inputs[7:0]
+@28
+arcade_io_device.f_past_valid
+@22
+arcade_io_device.frame_i[10:0]
+arcade_io_device.in_data_o[7:0]
+@28
+arcade_io_device.in_ready_i
+arcade_io_device.in_valid_o
+arcade_io_device.input_index[2:0]
+@22
+arcade_io_device.inputs_i[7:0]
+@28
+arcade_io_device.last_frame_beat
+@22
+arcade_io_device.last_input_sent[7:0]
+arcade_io_device.out_data_i[7:0]
+@28
+arcade_io_device.out_ready_o
+arcade_io_device.out_valid_i
+arcade_io_device.rstn_i
+arcade_io_device.usb_configured_i
+[pattern_trace] 1
+[pattern_trace] 0

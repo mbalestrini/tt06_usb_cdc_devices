@@ -1,0 +1,255 @@
+// DESCRIPTION: Verilator output: Waivers generated with --waiver-output
+
+`verilator_config
+
+// Below you find suggested waivers. You have three options:
+//   1. Fix the reason for the linter warning
+//   2. Keep the waiver permanently if you are sure this is okay
+//   3. Keep the waiver temporarily to suppress the output
+
+lint_off -rule PINCONNECTEMPTY -file "*src/usb_cdc/bulk_endp.v" -match "Cell pin connected by name with empty reference: 'in_empty_o'"
+
+lint_off -rule PINCONNECTEMPTY -file "*src/usb_cdc/bulk_endp.v" -match "Cell pin connected by name with empty reference: 'in_full_o'"
+
+lint_off -rule PINCONNECTEMPTY -file "*src/usb_cdc/bulk_endp.v" -match "Cell pin connected by name with empty reference: 'out_empty_o'"
+
+lint_off -rule PINCONNECTEMPTY -file "*src/usb_cdc/bulk_endp.v" -match "Cell pin connected by name with empty reference: 'out_full_o'"
+
+lint_off -rule IMPLICITSTATIC -file "*src/usb_cdc/sie.v" -match "Function/task's lifetime implicitly set to static*"
+
+lint_off -rule IMPLICITSTATIC -file "*src/usb_cdc/sie.v" -match "Function/task's lifetime implicitly set to static*"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/ctrl_endp.v" -match "Bits of signal are not used: 'channel'[31:7]"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/ctrl_endp.v" -match "Bits of signal are not used: 'channel'[31:7]"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/ctrl_endp.v" -match "Bits of signal are not used: 'channel'[31:3]"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/ctrl_endp.v" -match "Bits of signal are not used: 'channel'[31:3]"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/ctrl_endp.v" -match "Bits of signal are not used: 'channel'[31:8]"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/ctrl_endp.v" -match "Signal is not used: 'dummy'"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/in_fifo.v" -match "Signal is not used: 'app_clk_i'"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/in_fifo.v" -match "Signal is not used: 'app_rstn_i'"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/out_fifo.v" -match "Signal is not used: 'app_clk_i'"
+
+lint_off -rule UNUSEDSIGNAL -file "*src/usb_cdc/out_fifo.v" -match "Signal is not used: 'app_rstn_i'"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule BLKSEQ -file "*src/usb_cdc/sie.v" -match "Blocking assignment '=' in sequential logic process*"
+
+lint_off -rule SYNCASYNCNET -file "*src/usb_cdc/sie.v" -match "Signal flopped as both synchronous and async: 'tt_um_mbalestrini_usb_cdc_devices.u_usb_cdc_devices.u_usb_cdc.u_sie.in_toggle_endps'*"
+
+lint_off -rule SYNCASYNCNET -file "*src/usb_cdc/sie.v" -match "Signal flopped as both synchronous and async: 'tt_um_mbalestrini_usb_cdc_devices.u_usb_cdc_devices.u_usb_cdc.u_sie.out_toggle_endps'*"
+
+lint_off -rule SYNCASYNCNET -file "*src/usb_cdc/sie.v" -match "Signal flopped as both synchronous and async: 'tt_um_mbalestrini_usb_cdc_devices.u_usb_cdc_devices.u_usb_cdc.u_sie.phy_state_q'*"
+

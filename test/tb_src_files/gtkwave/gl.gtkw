@@ -1,0 +1,42 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Thu Apr 18 23:47:07 2024
+[*]
+[dumpfile] "/home/mbalestrini/WORK_DISK/Work/ASIC/tt06_usb_cdc_devices/test_full/output/tt_um_mbalestrini_usb_cdc_devices.fst"
+[dumpfile_mtime] "Thu Apr 18 23:45:31 2024"
+[dumpfile_size] 1141893
+[savefile] "/home/mbalestrini/WORK_DISK/Work/ASIC/tt06_usb_cdc_devices/test_full/tb_src_files/gtkwave/gl.gtkw"
+[timestart] 36476000000
+[size] 1920 1045
+[pos] 52 83
+*-25.968012 36793600000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_tt_um_mbalestrini_usb_cdc_devices.
+[treeopen] tb_tt_um_mbalestrini_usb_cdc_devices.raw_packet_rx.u_raw_packet_rx_task.
+[sst_width] 570
+[signals_width] 359
+[sst_expanded] 1
+[sst_vpaned_height] 347
+@200
+-TOP
+@820
+[color] 5
+tb_tt_um_mbalestrini_usb_cdc_devices.test[1023:0]
+@28
+tb_tt_um_mbalestrini_usb_cdc_devices.dp_sense
+tb_tt_um_mbalestrini_usb_cdc_devices.dn_sense
+tb_tt_um_mbalestrini_usb_cdc_devices.usb_pu
+@420
+[color] 1
+tb_tt_um_mbalestrini_usb_cdc_devices.errors
+@28
+tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.rst_n
+tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.clk
++{usb_tx_en} (7)tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.uio_oe[7:0]
++{usb_dn_tx} (6)tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.uio_out[7:0]
++{usb_dp_tx} (7)tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.uio_out[7:0]
++{usb_dp_rx} (7)tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.uio_in[7:0]
++{usb_dn_rx} (6)tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.uio_in[7:0]
++{usb_dp_pu} (7)tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.uo_out[7:0]
+tb_tt_um_mbalestrini_usb_cdc_devices.u_dut.\u_usb_cdc_devices.in_valid
+[pattern_trace] 1
+[pattern_trace] 0

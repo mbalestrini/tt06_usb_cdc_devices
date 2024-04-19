@@ -1,0 +1,23 @@
+[tasks]
+task_cover
+task_prove
+
+[options]
+task_prove: mode prove
+task_prove: depth 60
+
+task_cover: mode cover
+task_cover: depth 60
+
+
+[engines]
+smtbmc
+
+[script]
+read -formal arcade_io_device.v
+read -sv input_debouncer.v
+prep -top arcade_io_device
+
+[files]
+src/device0/arcade_io_device.v
+src/device0/input_debouncer.v
