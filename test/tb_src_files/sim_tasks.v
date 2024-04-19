@@ -54,6 +54,6 @@
          if (msg != "") \
             $write(": %0s", msg); \
          $write("                     \015"); \
-         $fflush(32'h8000_0001); // flush STDOUT \
+         $fflush(32'h8000_0001); \ // flush STDOUT
       end \
    end
