@@ -12,7 +12,7 @@
 
 # PL_TARGET_DENSITY - You can increase this if Global Placement fails with error GPL-0302.
 # Users have reported that values up to 0.8 worked well for them.
-set ::env(PL_TARGET_DENSITY) 0.7
+set ::env(PL_TARGET_DENSITY) 0.65
 
 # CLOCK_PERIOD - Increase this in case you are getting setup time violations.
 # The value is in nanoseconds, so 20ns == 50MHz.
@@ -22,8 +22,8 @@ set ::env(BASE_SDC_FILE) "$::env(DESIGN_DIR)/project.sdc"
 
 
 # Hold slack margin - Increase them in case you are getting hold violations.
-set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.1
-set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.05
+set ::env(PL_RESIZER_HOLD_SLACK_MARGIN) 0.2
+set ::env(GLB_RESIZER_HOLD_SLACK_MARGIN) 0.2
 
 # RUN_LINTER, LINTER_INCLUDE_PDK_MODELS - Disabling the linter is not recommended!
 set ::env(RUN_LINTER) 1
