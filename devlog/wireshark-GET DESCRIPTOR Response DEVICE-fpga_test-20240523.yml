@@ -1,0 +1,39 @@
+Frame 462: 82 bytes on wire (656 bits), 82 bytes captured (656 bits) on interface usbmon0, id 0
+USB URB
+    [Source: 3.23.0]
+    [Destination: host]
+    URB id: 0xffff888107861840
+    URB type: URB_COMPLETE ('C')
+    URB transfer type: URB_CONTROL (0x02)
+    Endpoint: 0x80, Direction: IN
+    Device: 23
+    URB bus id: 3
+    Device setup request: not relevant ('-')
+    Data: present (0)
+    URB sec: 1716493249
+    URB usec: 501283
+    URB status: Success (0)
+    URB length [bytes]: 18
+    Data length [bytes]: 18
+    [Request in: 461]
+    [Time from request: 0.000134000 seconds]
+    Unused Setup Header
+    Interval: 0
+    Start frame: 0
+    Copy of Transfer Flags: 0x00000200, Dir IN
+    Number of ISO descriptors: 0
+DEVICE DESCRIPTOR
+    bLength: 18
+    bDescriptorType: 0x01 (DEVICE)
+    bcdUSB: 0x0200
+    bDeviceClass: Miscellaneous (0xef)
+    bDeviceSubClass: 2
+    bDeviceProtocol: 1 (Interface Association Descriptor)
+    bMaxPacketSize0: 8
+    idVendor: Unknown (0x0000)
+    idProduct: Unknown (0x0000)
+    bcdDevice: 0x0110
+    iManufacturer: 0
+    iProduct: 0
+    iSerialNumber: 0
+    bNumConfigurations: 1
